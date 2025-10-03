@@ -141,7 +141,8 @@ class FinancialAnalyzer:
             # Convert EUR values to USD
             eur_mask = df_usd['Currency'] == 'EUR'
             if eur_mask.any():
-                df_usd.loc[eur_mask, month] = df_usd.loc[eur_mask, month] * eur_to_usd
+                # Convert to float to avoid dtype warning
+                df_usd.loc[eur_mask, month] = (df_usd.loc[eur_mask, month].astype(float) * eur_to_usd)
                 df_usd.loc[eur_mask, 'Currency'] = 'USD'
         
         return df_usd
