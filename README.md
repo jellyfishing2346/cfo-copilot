@@ -549,7 +549,7 @@ python verify_fix.py
 | **Platform** | **Status** | **URL** |
 |-------------|------------|---------|
 | 🚀 **Streamlit Cloud** | ✅ **LIVE** | [**Launch App →**](https://jellyfishing2346-cfo-copilot-app-c6pdcq.streamlit.app/) |
-| 🤗 **Hugging Face** | � **Deploy** | [**Deploy to Spaces →**](https://huggingface.co/spaces/new?template=streamlit&repo=jellyfishing2346/cfo-copilot) |
+| 🤗 **Hugging Face** | 🚀 **Deploy** | [**Deploy to Spaces →**](https://huggingface.co/new-space?sdk=streamlit) |
 | 🐳 **Docker** | 📋 Ready | *Use included Dockerfile* |
 | ☁️ **Cloud Platforms** | 📋 Ready | *AWS, GCP, Azure compatible* |
 
@@ -557,7 +557,7 @@ python verify_fix.py
 
 ### **🤗 Easy Hugging Face Deployment**
 
-**1-Click Deploy**: Click the "Deploy to Spaces" button above to automatically create a Hugging Face Space  
+**Quick Deploy**: Click "Deploy to Spaces" → Choose Streamlit SDK → Connect GitHub repo: `jellyfishing2346/cfo-copilot`  
 **Auto-Configuration**: All necessary files (`README_HF.md`, `requirements.txt`) are included  
 **Instant Access**: Your app will be live at `https://huggingface.co/spaces/YOUR_USERNAME/cfo-copilot`
 
@@ -679,7 +679,7 @@ CFO Copilot revolutionizes financial analysis by combining **natural language pr
 Just click → [**CFO Copilot Live**](https://jellyfishing2346-cfo-copilot-app-c6pdcq.streamlit.app/) ✨
 
 ### 🤗 **Option 2: Deploy to Hugging Face Spaces**
-Click → [**Deploy to Hugging Face →**](https://huggingface.co/spaces/new?template=streamlit&repo=jellyfishing2346/cfo-copilot) 🚀
+Click → [**Deploy to Hugging Face →**](https://huggingface.co/new-space?sdk=streamlit) 🚀
 
 ### 💻 **Option 3: Run Locally**
 
