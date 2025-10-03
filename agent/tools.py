@@ -25,6 +25,9 @@ class FinancialDataLoader:
     """Handles loading and preprocessing of financial data."""
     
     def __init__(self, fixtures_path: str = "fixtures"):
+        # Use absolute path for Streamlit Cloud compatibility
+        if not os.path.isabs(fixtures_path):
+            fixtures_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), fixtures_path)
         self.fixtures_path = fixtures_path
         self._actuals = None
         self._budget = None
@@ -34,27 +37,80 @@ class FinancialDataLoader:
     def load_actuals(self) -> pd.DataFrame:
         """Load actuals data."""
         if self._actuals is None:
-            self._actuals = pd.read_csv(f"{self.fixtures_path}/actuals.csv")
+            try:
+                self._actuals = pd.read_csv(f"{self.fixtures_path}/actuals.csv")
+            except FileNotFoundError:
+                # Fallback to sample data if file not found
+                self._actuals = self._get_sample_actuals()
         return self._actuals.copy()
     
     def load_budget(self) -> pd.DataFrame:
         """Load budget data."""
         if self._budget is None:
-            self._budget = pd.read_csv(f"{self.fixtures_path}/budget.csv")
+            try:
+                self._budget = pd.read_csv(f"{self.fixtures_path}/budget.csv")
+            except FileNotFoundError:
+                # Fallback to sample data if file not found
+                self._budget = self._get_sample_budget()
         return self._budget.copy()
     
     def load_fx(self) -> pd.DataFrame:
         """Load FX rates data."""
         if self._fx is None:
-            self._fx = pd.read_csv(f"{self.fixtures_path}/fx.csv")
+            try:
+                self._fx = pd.read_csv(f"{self.fixtures_path}/fx.csv")
+            except FileNotFoundError:
+                # Fallback to sample data if file not found
+                self._fx = self._get_sample_fx()
         return self._fx.copy()
     
     def load_cash(self) -> pd.DataFrame:
         """Load cash data."""
         if self._cash is None:
-            self._cash = pd.read_csv(f"{self.fixtures_path}/cash.csv")
+            try:
+                self._cash = pd.read_csv(f"{self.fixtures_path}/cash.csv")
+            except FileNotFoundError:
+                # Fallback to sample data if file not found
+                self._cash = self._get_sample_cash()
         return self._cash.copy()
-
+    
+    def _get_sample_actuals(self) -> pd.DataFrame:
+        """Generate sample actuals data when CSV file is not found."""
+        data = [
+            {'Entity': 'US', 'Account': 'Revenue', 'Apr 2025': 1350000, 'May 2025': 1400000, 'Jun 2025': 1450000, 'Currency': 'USD'},
+            {'Entity': 'US', 'Account': 'COGS', 'Apr 2025': 540000, 'May 2025': 560000, 'Jun 2025': 580000, 'Currency': 'USD'},
+            {'Entity': 'US', 'Account': 'Opex:Sales', 'Apr 2025': 135000, 'May 2025': 140000, 'Jun 2025': 145000, 'Currency': 'USD'},
+            {'Entity': 'US', 'Account': 'Opex:Marketing', 'Apr 2025': 95000, 'May 2025': 98000, 'Jun 2025': 100000, 'Currency': 'USD'},
+            {'Entity': 'EU', 'Account': 'Revenue', 'Apr 2025': 860000, 'May 2025': 880000, 'Jun 2025': 900000, 'Currency': 'EUR'},
+            {'Entity': 'EU', 'Account': 'COGS', 'Apr 2025': 344000, 'May 2025': 352000, 'Jun 2025': 360000, 'Currency': 'EUR'},
+        ]
+        return pd.DataFrame(data)
+    
+    def _get_sample_budget(self) -> pd.DataFrame:
+        """Generate sample budget data when CSV file is not found."""
+        data = [
+            {'Entity': 'US', 'Account': 'Revenue', 'Jun 2025': 1350000, 'Currency': 'USD'},
+            {'Entity': 'US', 'Account': 'COGS', 'Jun 2025': 540000, 'Currency': 'USD'},
+            {'Entity': 'EU', 'Account': 'Revenue', 'Jun 2025': 850000, 'Currency': 'EUR'},
+        ]
+        return pd.DataFrame(data)
+    
+    def _get_sample_fx(self) -> pd.DataFrame:
+        """Generate sample FX data when CSV file is not found."""
+        data = [
+            {'Month': 'Apr 2025', 'EUR_USD': 1.14, 'USD_EUR': 0.88},
+            {'Month': 'May 2025', 'EUR_USD': 1.12, 'USD_EUR': 0.89},
+            {'Month': 'Jun 2025', 'EUR_USD': 1.11, 'USD_EUR': 0.90}
+        ]
+        return pd.DataFrame(data)
+    
+    def _get_sample_cash(self) -> pd.DataFrame:
+        """Generate sample cash data when CSV file is not found."""
+        data = [
+            {'Entity': 'US', 'Jun 2025': 2400000, 'Currency': 'USD'},
+            {'Entity': 'EU', 'Jun 2025': 1400000, 'Currency': 'EUR'}
+        ]
+        return pd.DataFrame(data)
 
 class FinancialAnalyzer:
     """Core financial analysis functions."""
