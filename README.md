@@ -251,101 +251,316 @@ streamlit run app.py
 
 </div>
 
-## 🏗️ **Architecture**
+## 🏗️ **System Architecture**
 
 <div align="center">
 
-### **AI Agent Architecture**
+### **🤖 AI Agent Architecture Flow**
 
 ```mermaid
-graph TD
-    A[👤 User Query] --> B[🧠 Query Planner]
-    B --> C{🎯 Intent Classification}
-    C -->|Revenue Analysis| D[💰 Revenue Analyzer]
-    C -->|Trend Analysis| E[📈 Trend Analyzer] 
-    C -->|Expense Breakdown| F[💳 Expense Analyzer]
-    C -->|Cash Analysis| G[🏦 Cash Analyzer]
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'primaryColor': '#4f46e5',
+    'primaryTextColor': '#1e1b4b',
+    'primaryBorderColor': '#6366f1',
+    'lineColor': '#6366f1',
+    'secondaryColor': '#f3f4f6',
+    'tertiaryColor': '#f1f5f9',
+    'background': '#ffffff',
+    'mainBkg': '#f8fafc',
+    'secondBkg': '#e2e8f0',
+    'tertiaryBkg': '#cbd5e1'
+  }
+}}%%
+graph TB
+    subgraph "🎯 Input Layer"
+        A["👤<br/>User Query<br/><i>'Show revenue trends'</i>"]
+    end
     
-    D --> H[📊 Chart Generator]
+    subgraph "🧠 Intelligence Layer"
+        B["🧠<br/>Query Planner<br/><i>NLP Processing</i>"]
+        C{"🎯<br/>Intent<br/>Classification"}
+    end
+    
+    subgraph "🔧 Analysis Layer"
+        D["💰<br/>Revenue<br/>Analyzer"]
+        E["📈<br/>Trend<br/>Analyzer"]
+        F["�<br/>Expense<br/>Analyzer"]
+        G["🏦<br/>Cash<br/>Analyzer"]
+    end
+    
+    subgraph "📊 Visualization Layer"
+        H["📊<br/>Chart<br/>Generator"]
+        I["📋<br/>Response<br/>Formatter"]
+    end
+    
+    subgraph "✨ Output Layer"
+        J["✨<br/>Executive<br/>Dashboard"]
+    end
+    
+    A --> B
+    B --> C
+    C -->|"Revenue Analysis"| D
+    C -->|"Trend Analysis"| E
+    C -->|"Expense Analysis"| F
+    C -->|"Cash Analysis"| G
+    
+    D --> H
     E --> H
     F --> H
     G --> H
     
-    H --> I[📋 Response Formatter]
-    I --> J[✨ Executive Summary]
+    H --> I
+    I --> J
     
-    style A fill:#e1f5fe
-    style B fill:#f3e5f5
-    style H fill:#e8f5e8
-    style J fill:#fff3e0
+    classDef inputStyle fill:#dbeafe,stroke:#3b82f6,stroke-width:3px,color:#1e3a8a
+    classDef intelligenceStyle fill:#f3e8ff,stroke:#8b5cf6,stroke-width:3px,color:#581c87
+    classDef analysisStyle fill:#dcfce7,stroke:#22c55e,stroke-width:3px,color:#14532d
+    classDef vizStyle fill:#fef3c7,stroke:#f59e0b,stroke-width:3px,color:#92400e
+    classDef outputStyle fill:#fee2e2,stroke:#ef4444,stroke-width:3px,color:#7f1d1d
+    
+    class A inputStyle
+    class B,C intelligenceStyle
+    class D,E,F,G analysisStyle
+    class H,I vizStyle
+    class J outputStyle
+```
+
+### **🔄 Real-Time Data Processing Flow**
+
+```mermaid
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'primaryColor': '#059669',
+    'primaryTextColor': '#064e3b',
+    'primaryBorderColor': '#10b981',
+    'lineColor': '#10b981',
+    'actorBkg': '#ecfdf5',
+    'actorBorder': '#059669',
+    'actorTextColor': '#064e3b',
+    'activationBorderColor': '#10b981',
+    'activationBkgColor': '#d1fae5',
+    'sequenceNumberColor': '#065f46'
+  }
+}}%%
+sequenceDiagram
+    autonumber
+    
+    participant 👤 as 👤<br/>CFO User
+    participant 🖥️ as 🖥️<br/>Streamlit UI
+    participant 🧠 as 🧠<br/>Query Planner
+    participant 📊 as 📊<br/>Data Loader
+    participant 🔧 as 🔧<br/>Analyzer
+    participant 📈 as �<br/>Chart Engine
+    
+    Note over 👤,📈: User initiates financial analysis
+    
+    👤->>🖥️: "What was Q2 revenue vs budget?"
+    🖥️->>🧠: Parse natural language query
+    
+    Note over 🧠: AI processes intent
+    🧠->>🧠: Classify: REVENUE_VS_BUDGET
+    🧠->>📊: Load financial data
+    
+    Note over 📊: Multi-source data integration
+    📊->>📊: Load actuals.csv + budget.csv
+    📊->>📊: Apply FX rates (EUR→USD)
+    📊-->>🔧: Return processed datasets
+    
+    Note over 🔧: Financial calculations
+    🔧->>🔧: Calculate revenue variance
+    🔧->>🔧: Compute variance %
+    🔧->>📈: Generate bar chart data
+    
+    Note over 📈: Visual generation
+    📈->>📈: Create interactive Plotly chart
+    📈-->>🖥️: Return chart + insights
+    
+    Note over 🖥️,👤: Executive-ready results
+    🖥️->>👤: 📊 Interactive dashboard with KPIs
+    
+    rect rgb(240, 253, 244)
+        Note over 👤,📈: ⚡ Total processing time: <2 seconds
+    end
 ```
 
 </div>
 
-### **🔄 Data Flow**
+---
+
+### **🏗️ Technical Component Breakdown**
 
 <div align="center">
 
 ```mermaid
-sequenceDiagram
-    participant U as 👤 User
-    participant UI as 🖥️ Streamlit UI
-    participant P as 🧠 Planner
-    participant A as 🔧 Analyzer
-    participant C as 📊 Charts
+%%{init: {
+  'theme': 'base', 
+  'themeVariables': {
+    'cScale0': '#1f2937',
+    'cScale1': '#374151', 
+    'cScale2': '#4b5563',
+    'primaryColor': '#6366f1',
+    'primaryTextColor': '#f9fafb',
+    'primaryBorderColor': '#4338ca',
+    'lineColor': '#6366f1'
+  }
+}}%%
+flowchart LR
+    subgraph "🎨 Frontend"
+        direction TB
+        ST[Streamlit UI]
+        CH[Chart.js/Plotly]
+        IN[Interactive Components]
+    end
     
-    U->>UI: "Show Q2 revenue trends"
-    UI->>P: Parse natural language
-    P->>P: Classify intent → TREND_ANALYSIS
-    P->>A: Execute revenue_trend_analysis()
-    A->>A: Load & process CSV data
-    A->>C: Generate line chart
-    C->>UI: Return visualization + insights
-    UI->>U: 📈 Interactive dashboard
+    subgraph "🤖 AI Layer"  
+        direction TB
+        NLP[Natural Language Processing]
+        CLS[Intent Classification]
+        PLN[Query Planning]
+    end
+    
+    subgraph "💾 Data Layer"
+        direction TB
+        CSV[CSV Files]
+        PD[Pandas Processing] 
+        FX[Currency Conversion]
+    end
+    
+    subgraph "🧮 Business Logic"
+        direction TB
+        REV[Revenue Analysis]
+        MAR[Margin Calculations]
+        CSH[Cash Flow Analysis]
+        VAR[Variance Analysis]
+    end
+    
+    ST --> NLP
+    NLP --> CLS 
+    CLS --> PLN
+    PLN --> REV
+    PLN --> MAR
+    PLN --> CSH
+    PLN --> VAR
+    
+    REV --> PD
+    MAR --> PD
+    CSH --> PD
+    VAR --> PD
+    
+    PD --> CSV
+    PD --> FX
+    
+    REV --> CH
+    MAR --> CH
+    CSH --> CH
+    VAR --> CH
+    
+    CH --> IN
+    IN --> ST
+    
+    classDef frontend fill:#dbeafe,stroke:#3b82f6,stroke-width:2px
+    classDef ai fill:#f3e8ff,stroke:#8b5cf6,stroke-width:2px
+    classDef data fill:#dcfce7,stroke:#22c55e,stroke-width:2px
+    classDef business fill:#fef3c7,stroke:#f59e0b,stroke-width:2px
+    
+    class ST,CH,IN frontend
+    class NLP,CLS,PLN ai
+    class CSV,PD,FX data
+    class REV,MAR,CSH,VAR business
 ```
 
 </div>
 
 ## 📁 **Project Structure**
 
+<div align="center">
+
+### **🏗️ Clean, Modular Architecture**
+
+</div>
+
 ```
-🤖 cfo-copilot/
-├── 📋 README.md              # You are here!
-├── 🚀 app.py                 # Main Streamlit application
-├── 📦 requirements.txt       # Python dependencies  
-├── 🤖 agent/
-│   ├── 🧠 planner.py         # Natural language → structured queries
-│   └── 🔧 tools.py           # Financial analysis engine
-├── 📊 fixtures/
-│   ├── 💰 actuals.csv        # Monthly financial actuals
-│   ├── 🎯 budget.csv         # Budget targets & forecasts
-│   ├── 💱 fx.csv             # Multi-currency FX rates  
-│   └── 🏦 cash.csv           # Cash flow & runway data
-├── 🧪 tests/
-│   └── 🔍 test_agent.py      # Comprehensive test suite
-└── 📚 docs/                  # Additional documentation
-│   ├── budget.csv        # Monthly budget data
-│   ├── fx.csv           # Currency exchange rates
-│   └── cash.csv         # Monthly cash balances
-└── tests/
-    ├── __init__.py
-    └── test_agent.py     # Unit tests
+🤖 cfo-copilot/                    
+│
+├── 🎯 CORE APPLICATION
+│   ├── 🚀 app.py                   # Main Streamlit web application
+│   ├── 📦 requirements.txt         # Python dependencies & versions
+│   └── 📋 README.md               # Comprehensive documentation
+│
+├── 🤖 AI AGENT SYSTEM
+│   └── agent/
+│       ├── 🧠 planner.py          # Natural language → structured queries
+│       └── 🔧 tools.py            # Financial analysis & calculation engine
+│
+├── 📊 DATA & FIXTURES  
+│   └── fixtures/
+│       ├── 💰 actuals.csv         # Monthly financial actuals (US/EU)
+│       ├── 🎯 budget.csv          # Budget targets & forecasts
+│       ├── 💱 fx.csv              # Multi-currency exchange rates
+│       └── 🏦 cash.csv            # Cash balances & runway data
+│
+├── 🧪 TESTING & QA
+│   └── tests/
+│       ├── 🔍 test_agent.py       # Comprehensive unit tests
+│       ├── 🎭 demo.py             # Dependency-free demo
+│       └── 📊 verify_fix.py       # Validation scripts
+│
+└── 📚 DOCUMENTATION
+    ├── 📖 DEMO_SCRIPT.md          # Usage walkthrough
+    ├── 🔧 GROSS_MARGIN_FIX.md     # Technical debugging guide
+    └── 🎨 Screenshots/            # Visual demonstrations
 ```
 
-## Data Sources
+---
 
-The app analyzes financial data from CSV files:
+### **🎯 Feature Capabilities Overview**
 
-- **actuals.csv**: Monthly actual financial data by entity/account
-- **budget.csv**: Monthly budget data by entity/account  
-- **fx.csv**: Currency exchange rates for USD conversion
-- **cash.csv**: Monthly cash balances
+<div align="center">
 
-## Key Metrics Calculated
+```mermaid
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'primaryColor': '#0f172a',
+    'primaryTextColor': '#f8fafc',
+    'primaryBorderColor': '#334155',
+    'lineColor': '#475569',
+    'secondaryColor': '#1e293b',
+    'tertiaryColor': '#334155',
+    'background': '#0f172a',
+    'mainBkg': '#1e293b',
+    'secondBkg': '#334155'
+  }
+}}%%
+mindmap
+  root((🤖 CFO Copilot))
+    🗣️ Natural Language
+      "What was Q2 revenue?"
+      "Show margin trends"  
+      "Break down expenses"
+      "Cash runway analysis"
+    📊 Financial Analysis
+      💰 Revenue vs Budget
+      📈 Gross Margin Trends
+      💳 OPEX Breakdown
+      🏦 Cash Flow & Runway
+      💱 Multi-Currency (USD/EUR)
+    🎨 Visualizations
+      📊 Interactive Bar Charts
+      📈 Trend Line Graphs  
+      🥧 Expense Pie Charts
+      📋 Executive Summaries
+    🚀 Deployment
+      ☁️ Streamlit Cloud
+      🔄 Auto-deployment
+      🌍 Public Access
+      📱 Mobile Responsive
+```
 
-1. **Revenue (USD)**: Actual vs Budget comparison
-2. **Gross Margin %**: (Revenue - COGS) / Revenue
-3. **OPEX Total**: Grouped by operational expense categories
+</div>
 4. **EBITDA**: Revenue - COGS - OPEX (proxy calculation)
 5. **Cash Runway**: Cash ÷ Average monthly net burn (last 3 months)
 
