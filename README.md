@@ -4,8 +4,25 @@
 
 ### *AI-Powered Financial Analysis Assistant*
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](├── 📚 docs/                  # Additional documentation
-```
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://jellyfishing2346-cfo-copilot-app-c6pdcq.streamlit.app/)
+
+---
+
+## 🎬 **Live Demo**
+
+### **🚀 Experience CFO Copilot in Action**
+
+<img src="assets/demo.gif" alt="CFO Copilot Demo" width="800" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+
+**✨ Features Showcased:**
+- 💬 Natural language financial queries
+- 📊 Interactive charts & visualizations  
+- 💰 Revenue vs Budget analysis
+- 📈 Gross margin trend analysis
+- 🏃‍♂️ Cash runway projections
+
+[**🔗 Try it live**](https://jellyfishing2346-cfo-copilot-app-c6pdcq.streamlit.app/)
+
 
 ## 🛠️ **Technology Stack**
 
@@ -316,17 +333,6 @@ fig.add_trace(go.Bar(
 ### **📈 Multi-Entity Financial Data Pipeline**
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'primaryColor': '#1f2937',
-    'primaryTextColor': '#f9fafb', 
-    'primaryBorderColor': '#374151',
-    'lineColor': '#6b7280',
-    'secondaryColor': '#374151',
-    'tertiaryColor': '#4b5563'
-  }
-}}%%
 flowchart TB
     subgraph "📂 Data Sources"
         A[💰 actuals.csv<br/>Monthly Performance]
@@ -994,27 +1000,23 @@ mindmap
 ```
 
 </div>
-4. **EBITDA**: Revenue - COGS - OPEX (proxy calculation)
-5. **Cash Runway**: Cash ÷ Average monthly net burn (last 3 months)
 
-## Testing
+---
 
-Run the test suite:
-```bash
-pytest tests/
-```
+<div align="center">
 
-## Demo
+### **⭐ If this project helped you, please star the repository!**
 
-[Link to demo video - 30-60 seconds showing key functionality]
+[![GitHub stars](https://img.shields.io/github/stars/jellyfishing2346/cfo-copilot?style=social)](https://github.com/jellyfishing2346/cfo-copilot/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/jellyfishing2346/cfo-copilot?style=social)](https://github.com/jellyfishing2346/cfo-copilot/network)
 
-## Deployment
+**Built with ❤️ for the AI & Finance community**
 
-The app can be deployed to:
-- Streamlit Cloud
-- Hugging Face Spaces
-- Any platform supporting Python web apps
+[🚀 **Try CFO Copilot Live**](https://jellyfishing2346-cfo-copilot-app-c6pdcq.streamlit.app/) • [⭐ **Star on GitHub**](https://github.com/jellyfishing2346/cfo-copilot) • [🤝 **Connect on LinkedIn**](https://linkedin.com/in/yourprofile)
 
-## Contributing
+---
 
-This is a coding assignment project demonstrating AI agent design, data analysis, and UX integration for financial reporting automation.
+**© 2025 CFO Copilot - AI-Powered Financial Analysis**
+
+</div>
+
