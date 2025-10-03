@@ -549,9 +549,17 @@ python verify_fix.py
 | **Platform** | **Status** | **URL** |
 |-------------|------------|---------|
 | 🚀 **Streamlit Cloud** | ✅ **LIVE** | [**Launch App →**](https://jellyfishing2346-cfo-copilot-app-c6pdcq.streamlit.app/) |
-| 🤗 **Hugging Face** | 📋 Ready | *Deploy from GitHub* |
+| 🤗 **Hugging Face** | � **Deploy** | [**Deploy to Spaces →**](https://huggingface.co/spaces/new?template=streamlit&repo=jellyfishing2346/cfo-copilot) |
 | 🐳 **Docker** | 📋 Ready | *Use included Dockerfile* |
 | ☁️ **Cloud Platforms** | 📋 Ready | *AWS, GCP, Azure compatible* |
+
+</div>
+
+### **🤗 Easy Hugging Face Deployment**
+
+**1-Click Deploy**: Click the "Deploy to Spaces" button above to automatically create a Hugging Face Space  
+**Auto-Configuration**: All necessary files (`README_HF.md`, `requirements.txt`) are included  
+**Instant Access**: Your app will be live at `https://huggingface.co/spaces/YOUR_USERNAME/cfo-copilot`
 
 </div>
 
@@ -670,7 +678,10 @@ CFO Copilot revolutionizes financial analysis by combining **natural language pr
 ### 🌐 **Option 1: Use Live Demo (Recommended)**
 Just click → [**CFO Copilot Live**](https://jellyfishing2346-cfo-copilot-app-c6pdcq.streamlit.app/) ✨
 
-### 💻 **Option 2: Run Locally**
+### 🤗 **Option 2: Deploy to Hugging Face Spaces**
+Click → [**Deploy to Hugging Face →**](https://huggingface.co/spaces/new?template=streamlit&repo=jellyfishing2346/cfo-copilot) 🚀
+
+### 💻 **Option 3: Run Locally**
 
 ```bash
 # 1️⃣ Clone the repository
@@ -753,11 +764,11 @@ graph TB
     H --> I
     I --> J
     
-    classDef inputStyle fill:#dbeafe,stroke:#3b82f6,stroke-width:3px,color:#1e3a8a
-    classDef intelligenceStyle fill:#f3e8ff,stroke:#8b5cf6,stroke-width:3px,color:#581c87
-    classDef analysisStyle fill:#dcfce7,stroke:#22c55e,stroke-width:3px,color:#14532d
-    classDef vizStyle fill:#fef3c7,stroke:#f59e0b,stroke-width:3px,color:#92400e
-    classDef outputStyle fill:#fee2e2,stroke:#ef4444,stroke-width:3px,color:#7f1d1d
+    classDef inputStyle fill:#dbeafe,stroke:#3b82f6,stroke-width:3px
+    classDef intelligenceStyle fill:#f3e8ff,stroke:#8b5cf6,stroke-width:3px
+    classDef analysisStyle fill:#dcfce7,stroke:#22c55e,stroke-width:3px
+    classDef vizStyle fill:#fef3c7,stroke:#f59e0b,stroke-width:3px
+    classDef outputStyle fill:#fee2e2,stroke:#ef4444,stroke-width:3px
     
     class A inputStyle
     class B,C intelligenceStyle

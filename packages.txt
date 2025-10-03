@@ -1,0 +1,11 @@
+# System packages for Hugging Face Spaces (if needed)
+# Most Python packages don't need system dependencies
+# Uncomment lines below if you need specific system packages:
+
+# For numerical computing (usually not needed as included in base image)
+# python3-dev
+# build-essential
+
+# For additional data processing (usually not needed)
+# libopenblas-dev
+# liblapack-dev
