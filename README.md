@@ -11,7 +11,7 @@
 
 <div align="center">
 
-### **🚀 Production-Grade Technologies**
+### **🚀 Built with Modern Python Ecosystem**
 
 </div>
 
@@ -19,88 +19,280 @@
 <tr>
 <td width="50%" valign="top">
 
-### **🤖 AI & Intelligence Layer**
+### **🐍 Core Python Stack**
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor': '#4338ca', 'primaryTextColor': '#f8fafc', 'primaryBorderColor': '#6366f1', 'lineColor': '#8b5cf6'}}}%%
-graph LR
-    A[🧠 NLP Engine] --> B[🎯 Intent Classification]
-    B --> C[📋 Query Planning]
-    C --> D[🔧 Function Execution]
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor': '#3776ab', 'primaryTextColor': '#ffffff', 'primaryBorderColor': '#306998', 'lineColor': '#4b8bbe'}}}%%
+graph TB
+    A[🐍 Python 3.13+] --> B[📊 Pandas 2.1.0+]
+    A --> C[� NumPy 1.25.0+]
+    B --> D[� Custom Financial Engine]
+    C --> D
     
-    style A fill:#4338ca,color:#f8fafc
-    style B fill:#7c3aed,color:#f8fafc  
-    style C fill:#9333ea,color:#f8fafc
-    style D fill:#a855f7,color:#f8fafc
+    style A fill:#3776ab,color:#ffffff
+    style B fill:#150458,color:#ffffff
+    style C fill:#013243,color:#ffffff
+    style D fill:#4b8bbe,color:#ffffff
 ```
 
-**🔹 Natural Language Processing**  
-**🔹 Pattern Recognition & Classification**  
-**🔹 Intelligent Query Understanding**
+**✅ Pandas**: Financial data processing & CSV handling  
+**✅ NumPy**: High-performance mathematical calculations  
+**✅ Python 3.13+**: Latest language features & performance  
 
 </td>
 <td width="50%" valign="top">
 
-### **🐍 Backend Infrastructure**
-```mermaid 
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor': '#059669', 'primaryTextColor': '#f8fafc', 'primaryBorderColor': '#10b981', 'lineColor': '#34d399'}}}%%
-graph LR
-    A[🐍 Python 3.13+] --> B[🐼 Pandas]
-    B --> C[🔢 NumPy]  
-    C --> D[⚡ FastAPI Ready]
+### **🎨 Web Framework & UI**
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor': '#ff4b4b', 'primaryTextColor': '#ffffff', 'primaryBorderColor': '#ff6b6b', 'lineColor': '#ff8e53'}}}%%
+graph TB
+    A[🌊 Streamlit 1.28.1+] --> B[🎮 Interactive Components]
+    A --> C[� Chat Interface]
+    B --> D[📱 Responsive Design]
+    C --> D
     
-    style A fill:#059669,color:#f8fafc
-    style B fill:#10b981,color:#f8fafc
-    style C fill:#34d399,color:#047857
-    style D fill:#6ee7b7,color:#047857
+    style A fill:#ff4b4b,color:#ffffff
+    style B fill:#ff6b6b,color:#ffffff
+    style C fill:#ff8e53,color:#ffffff
+    style D fill:#ffa726,color:#ffffff
 ```
 
-**🔹 High-Performance Data Processing**  
-**🔹 Financial Calculations Engine**  
-**🔹 Multi-Currency Support**
+**✅ Streamlit**: Rapid web app development  
+**✅ Session State**: Chat memory & user interactions  
+**✅ Sidebar Navigation**: Intuitive sample questions  
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-### **🎨 Frontend & Visualization**
+### **📊 Data Visualization**
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor': '#dc2626', 'primaryTextColor': '#f8fafc', 'primaryBorderColor': '#ef4444', 'lineColor': '#f87171'}}}%%
-graph LR
-    A[🌊 Streamlit] --> B[📊 Plotly Charts]
-    B --> C[🎨 Interactive UI]
-    C --> D[📱 Mobile Ready]
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor': '#119dff', 'primaryTextColor': '#ffffff', 'primaryBorderColor': '#1f77b4', 'lineColor': '#52b4d3'}}}%%
+graph TB
+    A[📈 Plotly 5.17.0+] --> B[📊 Bar Charts]
+    A --> C[📉 Line Charts]
+    A --> D[🥧 Pie Charts]
+    B --> E[� Interactive Dashboards]
+    C --> E
+    D --> E
     
-    style A fill:#dc2626,color:#f8fafc
-    style B fill:#ef4444,color:#f8fafc
-    style C fill:#f87171,color:#dc2626
-    style D fill:#fca5a5,color:#dc2626
+    style A fill:#119dff,color:#ffffff
+    style B fill:#1f77b4,color:#ffffff
+    style C fill:#52b4d3,color:#ffffff
+    style D fill:#7bb3db,color:#ffffff
+    style E fill:#a4d4e6,color:#1565c0
 ```
 
-**🔹 Real-Time Interactive Dashboard**  
-**🔹 Professional Chart Generation**  
-**🔹 Executive-Grade Visualizations**
+**✅ Plotly**: Interactive financial charts  
+**✅ Graph Objects**: Custom chart styling  
+**✅ Real-time Updates**: Dynamic data visualization  
 
 </td>
 <td width="50%" valign="top">
 
-### **☁️ Deployment & Operations**
+### **🧪 Testing & Quality**
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor': '#7c2d12', 'primaryTextColor': '#f8fafc', 'primaryBorderColor': '#ea580c', 'lineColor': '#fb923c'}}}%%
-graph LR
-    A[☁️ Streamlit Cloud] --> B[🔄 Auto Deploy]
-    B --> C[🌍 Global CDN]
-    C --> D[📊 Analytics]
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor': '#0e7545', 'primaryTextColor': '#ffffff', 'primaryBorderColor': '#109c58', 'lineColor': '#14b36a'}}}%%
+graph TB
+    A[🧪 Pytest 7.4.2+] --> B[🎭 Mock Framework]
+    A --> C[📋 Test Coverage]
+    B --> D[✅ Quality Assurance]
+    C --> D
     
-    style A fill:#7c2d12,color:#f8fafc
-    style B fill:#ea580c,color:#f8fafc
-    style C fill:#fb923c,color:#7c2d12
-    style D fill:#fdba74,color:#7c2d12
+    style A fill:#0e7545,color:#ffffff
+    style B fill:#109c58,color:#ffffff
+    style C fill:#14b36a,color:#ffffff
+    style D fill:#22c55e,color:#ffffff
 ```
 
-**🔹 Zero-Downtime Deployment**  
-**🔹 Production Monitoring**  
-**🔹 Scalable Infrastructure**
+**✅ Pytest**: Comprehensive test suite  
+**✅ Custom Mocks**: Pandas-free testing  
+**✅ Demo Scripts**: Dependency-free validation  
+
+</td>
+</tr>
+</table>
+
+---
+
+### **🎯 Custom AI Agent Architecture**
+
+<div align="center">
+
+```mermaid
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'primaryColor': '#6366f1',
+    'primaryTextColor': '#f8fafc',
+    'primaryBorderColor': '#4f46e5',
+    'lineColor': '#8b5cf6',
+    'secondaryColor': '#e0e7ff',
+    'tertiaryColor': '#c7d2fe'
+  }
+}}%%
+flowchart TB
+    subgraph "🗣️ Natural Language Layer"
+        A[User Query: 'Show Q2 revenue trends']
+        B[Regex Pattern Matching]
+        C[Intent Classification Engine]
+    end
+    
+    subgraph "🧠 Query Planning Layer"
+        D[QueryPlanner Class]
+        E[Month Extraction Logic] 
+        F[Chart Type Selection]
+        G[Function Call Generation]
+    end
+    
+    subgraph "� Financial Analysis Layer"
+        H[FinancialDataLoader Class]
+        I[CSV Processing Engine]
+        J[Multi-Currency Converter]
+        K[FinancialAnalyzer Class]
+    end
+    
+    subgraph "📊 Visualization Layer"
+        L[Plotly Chart Factory]
+        M[Executive Response Formatter]
+        N[Streamlit UI Renderer]
+    end
+    
+    A --> B --> C --> D
+    D --> E --> F --> G
+    G --> H --> I --> J --> K
+    K --> L --> M --> N
+    
+    classDef nlpStyle fill:#ddd6fe,stroke:#6366f1,stroke-width:2px
+    classDef planStyle fill:#dcfce7,stroke:#22c55e,stroke-width:2px
+    classDef dataStyle fill:#fef3c7,stroke:#f59e0b,stroke-width:2px
+    classDef vizStyle fill:#fee2e2,stroke:#ef4444,stroke-width:2px
+    
+    class A,B,C nlpStyle
+    class D,E,F,G planStyle
+    class H,I,J,K dataStyle
+    class L,M,N vizStyle
+```
+
+</div>
+
+### **📋 Actual Implementation Details**
+
+<table align="center" width="100%">
+<tr>
+<td width="33%" valign="top">
+
+#### **� Pattern Recognition**
+```python
+# Real regex patterns from planner.py
+intent_patterns = {
+    'revenue_vs_budget': [
+        r'revenue.*vs.*budget',
+        r'revenue.*budget',
+        r'actual.*vs.*budget'
+    ],
+    'gross_margin_trend': [
+        r'gross.*margin.*trend',
+        r'margin.*last.*months'
+    ]
+}
+```
+
+</td>
+<td width="33%" valign="top">
+
+#### **� Data Processing**
+```python
+# Actual CSV handling from tools.py
+def load_actuals(self):
+    try:
+        self._actuals = pd.read_csv(
+            f"{self.fixtures_path}/actuals.csv"
+        )
+    except FileNotFoundError:
+        self._actuals = self._get_sample_actuals()
+```
+
+</td>
+<td width="33%" valign="top">
+
+#### **📊 Chart Generation**
+```python
+# Real Plotly implementation from app.py
+fig = go.Figure()
+fig.add_trace(go.Bar(
+    x=['Actual', 'Budget'],
+    y=[actual, budget],
+    marker_color=['#1f77b4', '#ff7f0e']
+))
+```
+
+</td>
+</tr>
+</table>
+
+---
+
+### **🏆 Complete Technology Ecosystem**
+
+<div align="center">
+
+| **Layer** | **Technology** | **Version** | **Purpose** | **Why Chosen** |
+|:----------|:---------------|:------------|:------------|:---------------|
+| **🌐 Web Framework** | `Streamlit` | `1.28.1+` | Interactive web application | Rapid prototyping, built-in components, Python-native |
+| **📊 Data Processing** | `Pandas` | `2.1.0+` | CSV handling & data manipulation | Industry standard for financial data analysis |
+| **🧮 Numerical Computing** | `NumPy` | `1.25.0+` | Mathematical calculations | High-performance array operations |
+| **📈 Visualization** | `Plotly` | `5.17.0+` | Interactive charts & dashboards | Executive-grade visualizations, web-ready |
+| **🧪 Testing** | `Pytest` | `7.4.2+` | Unit testing & validation | Comprehensive test coverage |
+| **📝 Data Export** | `ReportLab` | `4.0.4+` | PDF report generation | Professional financial reporting |
+| **📋 Data Formats** | `OpenPyXL` | `3.1.2+` | Excel file processing | Business-friendly data formats |
+| **🌍 HTTP Client** | `Requests` | `2.31.0+` | API communications | Future extensibility for data sources |
+| **☁️ Deployment** | `Streamlit Cloud` | `Latest` | Production hosting | Zero-config deployment, GitHub integration |
+
+</div>
+
+### **💡 Architecture Decisions & Rationale**
+
+<table align="center">
+<tr>
+<td width="50%" valign="top">
+
+#### **🎯 Why This Tech Stack?**
+
+**🚀 Rapid Development**
+- Streamlit enabled building a full web app in hours, not days
+- No HTML/CSS/JavaScript needed - pure Python focus
+- Built-in components for chat, sidebar, file upload
+
+**📊 Financial Data Focus** 
+- Pandas perfect for CSV financial data processing
+- NumPy handles complex financial calculations efficiently  
+- Plotly creates professional, interactive charts CFOs expect
+
+**🔧 Maintainability**
+- Pure Python stack - single language expertise needed
+- Modular architecture separates concerns cleanly
+- Extensive testing with custom mocking framework
+
+</td>
+<td width="50%" valign="top">
+
+#### **⚡ Performance Optimizations**
+
+**💾 Smart Data Loading**
+- CSV caching with fallback data mechanisms
+- Lazy loading of financial datasets
+- Error-resilient data processing pipeline
+
+**🎨 UI Performance**
+- Session state management for chat history
+- Efficient chart rendering with Plotly
+- Responsive design for mobile/desktop
+
+**🧪 Development Workflow**
+- Custom mock framework for dependency-free testing
+- Demo scripts that run without external libraries
+- Comprehensive error handling with graceful fallbacks
 
 </td>
 </tr>
